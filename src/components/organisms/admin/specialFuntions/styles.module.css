@@ -1,0 +1,12 @@
+@import '../../../../styles/ui/section.module.css';
+@import '../../../../styles/ui/button.module.css';
+@import '../../../../styles/ui/text.module.css';
+
+.container {
+	display: flex;
+	overflow: auto;
+	@extend .section;
+	align-items: center;
+	height: max-content;
+	justify-content: center;
+}

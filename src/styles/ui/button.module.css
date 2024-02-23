@@ -1,0 +1,83 @@
+.button {
+  border: none;
+  width: max-content;
+  padding: 30px 40px;
+  border-radius: 10px !important;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &_pink {
+    @extend .button;
+    background-color: var(--pink) !important;
+
+    &:hover {
+      background-color: var(--light-pink) !important;
+    }
+    &:active {
+      background-color: var(--pink) !important;
+    }
+  }
+  &_blue {
+    @extend .button;
+    background-color: var(--blue) !important;
+
+    &:hover {
+      background-color: var(--light-blue) !important;
+    }
+    &:active {
+      background-color: var(--blue) !important;
+    }
+  }
+  &_green {
+    @extend .button;
+    color: var(--black);
+    background-color: var(--green) !important;
+
+    &:hover {
+      background-color: var(--green) !important;
+    }
+    &:active {
+      background-color: var(--green) !important;
+    }
+  }
+  &_purple_blue {
+    @extend .button;
+    color: var(--black);
+    background-color: var(--purple-blue) !important;
+
+    &:hover {
+      background-color: var(--purple-blue) !important;
+    }
+    &:active {
+      background-color: var(--purple-blue) !important;
+    }
+  }
+
+  &_green_gradient {
+    @extend .button;
+    color: var(--black);
+    background: var(--green-gradient) !important;
+
+    &:hover {
+      background: var(--green-gradient) !important;
+    }
+    &:active {
+      background: var(--green-gradient) !important;
+    }
+  }
+  &_blue_gradient {
+    @extend .button;
+    color: var(--black);
+    background: var(--blue-gradiente) !important;
+
+    &:hover {
+      background: var(--blue-gradiente) !important;
+    }
+    &:active {
+      background: var(--blue-gradiente) !important;
+    }
+  }
+}

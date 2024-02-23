@@ -1,0 +1,16 @@
+@import '../ui/text.module.css';
+
+.title {
+	color: var(--white);
+}
+
+.subtitle {
+	text-transform: uppercase;
+}
+
+.background {
+	height: 100vh;
+	overflow: auto;
+	backdrop-filter: blur(10px);
+	background-color: #0000002f;
+}

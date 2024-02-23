@@ -1,0 +1,54 @@
+@import "../../../styles/ui/button.module.css";
+@import "../../../styles/ui/text.module.css";
+
+.navbar {
+  height: 100%;
+  padding: 10px;
+  width: 100%;
+  backdrop-filter: blur(0px);
+  background-color: transparent;
+
+  @media (max-width: 780px) {
+    padding-inline: 0.5rem;
+  }
+
+  &_toggle {
+    width: 3rem;
+  }
+
+  &_menuMobile {
+    margin-top: 2rem;
+  }
+
+  &_content {
+    z-index: 2;
+  }
+}
+
+.items {
+  font-size: 1rem;
+  font-weight: 200;
+  color: var(--white);
+
+  &_disabled {
+    @extend .items;
+    color: var(--white);
+  }
+}
+
+.walletButton {
+  button {
+    color: white;
+    line-height: normal;
+    height: auto;
+    padding: 12px 30px;
+    border-radius: 25px;
+    background-color: var(--purple-blue);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

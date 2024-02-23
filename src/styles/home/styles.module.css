@@ -1,0 +1,45 @@
+@import "../../styles/ui/text.module.css";
+@import "../../styles/ui/button.module.css";
+
+.walletButton {
+  button {
+    @extend .button_green_gradient;
+    height: 42px;
+    /* background: linear-gradient(0deg, #71d94d 25.8%, #2b9797 86.94%); */
+  }
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  min-height: 80vh;
+  justify-content: center;
+  .info {
+    width: 50%;
+    padding: 3rem;
+    /* background-color: #f18aae; */
+
+    @media (max-width: 700px) {
+      width: 100%;
+      margin-top: 5rem;
+    }
+
+    .title {
+      color: var(--text-color);
+      font-weight: 800;
+      text-transform: uppercase;
+      span {
+        color: var(--green-blue);
+      }
+    }
+    .text {
+      font-weight: 400;
+      font-size: 18px;
+      color: var(--text-color);
+      font-family: var(--font-secondary);
+      span {
+        font-weight: 800;
+      }
+    }
+  }
+}

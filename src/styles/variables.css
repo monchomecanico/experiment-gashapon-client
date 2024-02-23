@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --grey: #838382;
+  --pink: #e39dff;
+  --blue: #70bde9;
+  --green: #66f534;
+  --green-blue: #2b9797;
+  --orange: #ff6b2c;
+  --purple: #a900f9;
+  --light-grey: #cfdce6;
+  --light-pink: #e7b3fb;
+  --purple-blue: #665ae8;
+  --light-blue: #9dd0ed;
+  --light-orange: #ff902c;
+  --text-color: #fffbc9;
+  --dark-red: #65281c;
+  --green-gradient: linear-gradient(90deg, #71d94d 25.8%, #2b9797 86.94%);
+  --blue-gradiente: linear-gradient(90deg, #4b7ad6 26.44%, #5caeea 100%);
+
+  --font-secondary: "DM Sans", sans-serif;
+  --font-principal: "Secular One", sans-serif;
+}

@@ -1,0 +1,76 @@
+@import "../../../../styles/ui/section.module.css";
+@import "../../../../styles/ui/button.module.css";
+@import "../../../../styles/ui/text.module.css";
+
+.container {
+  @extend .section;
+  overflow: auto;
+  min-height: 230px;
+}
+
+.prizeList_container {
+  @extend .container;
+  max-height: 430px;
+  margin-top: 10px;
+
+  .prizeItem {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: #16181a;
+    box-shadow: 0px 0px 10px 2px var(--green-blue);
+  }
+}
+
+.accordion {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  :global(.p-accordion-header) {
+    & > a {
+      padding: 0.5rem !important;
+
+      border-radius: 10px !important;
+      background-color: #16181a !important;
+      border: 2px solid var(--green-blue) !important;
+
+      :global(.p-accordion-header-text) {
+        width: 95%;
+        .header {
+          width: 100%;
+          display: flex;
+          color: white;
+          justify-content: space-between;
+          border-radius: 10px !important;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  :global(.p-accordion-tab-active) {
+    :global(.p-accordion-header) {
+      & > a {
+        border-bottom: none !important;
+        border-radius: 10px 10px 0px 0px !important;
+      }
+    }
+  }
+
+  :global(.p-accordion-content) {
+    border: none !important;
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--green-blue) !important;
+    background-color: #16181a28 !important;
+  }
+}
+
+.itemList {
+  width: 100%;
+  color: white;
+  display: flex;
+  padding: 1rem;
+  background-color: #16181a;
+  border: 1px solid var(--green-blue);
+  justify-content: space-between;
+  border-radius: 10px !important;
+}
