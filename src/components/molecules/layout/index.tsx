@@ -20,7 +20,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
 		<div className={classes.container}>
 			<Head>
 				<title>Experiments Gashapon</title>
-				<link rel='shortcut icon' href='/assets/logo.svg' />
+				<link rel='shortcut icon' href='/assets/coin1.webp' />
 				<meta name='description' content='Yoked Yetis Gashapon' />
 			</Head>
 
