@@ -57,7 +57,7 @@ const opts = {
 	commitment: 'confirmed',
 	skipPreflight: true,
 } as anchor.web3.ConfirmOptions;
-const PRIORITY_RATE = 500; // MICRO_LAMPORTS
+const PRIORITY_RATE = 2000; // MICRO_LAMPORTS
 const PRIORITY_FEE_IX = ComputeBudgetProgram.setComputeUnitPrice({
 	microLamports: PRIORITY_RATE,
 });

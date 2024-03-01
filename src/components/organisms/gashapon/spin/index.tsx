@@ -80,7 +80,7 @@ export const Spin: FC<SpinType> = ({
 				price_amount,
 			);
 
-			console.log('🚀❤️‍🔥❤️‍🔥❤️‍🔥 ~ SpinLootbox ~ response:', response);
+			console.log('🚀❤️‍🔥❤️‍🔥❤️‍🔥@ ~ SpinLootbox ~ response:', response);
 			console.log('👀👀👀 ~ SpinLootbox ~ error:', error);
 
 			if (response) await sendTicket(response);
