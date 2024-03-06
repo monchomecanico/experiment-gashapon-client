@@ -485,14 +485,20 @@ export async function changeFee(
 	return { response, error };
 }
 //! Jugador compra un ticket para jugar la ruleta y mandar al backend
-export async function buyTurn(
-	isYouWallet: anchor.Wallet,
-	yourWheel: PublicKey,
-	is_Solana: boolean,
-	tokenIDWheel: PublicKey = NATIVE_MINT,
-	price_amount: number,
-	// program: anchor.Program<Toyou>,
-) {
+export async function buyTurn({
+	isYouWallet,
+	yourWheel,
+	is_Solana,
+	tokenIDWheel = NATIVE_MINT,
+	price_amount,
+}: {
+	isYouWallet: anchor.Wallet;
+	yourWheel: PublicKey;
+	is_Solana: boolean;
+	tokenIDWheel: PublicKey;
+	price_amount: number;
+}) // program: anchor.Program<Toyou>,
+{
 	const { provider, program } = getProgram(isYouWallet);
 	let response;
 	let error;

@@ -16,8 +16,10 @@ import { buyTurn, pause } from '@/utils/toyoufrontv2';
 import { Soporte } from '../soporteTecnito';
 import { Spinner } from '@nextui-org/react';
 import { verifyIsTx } from '@/commons';
+import { TOKENS_DATA } from './utils';
 
 interface SpinType {
+	index: number;
 	loading: boolean;
 	selectedWheel: any;
 	children: ReactNode;
@@ -28,6 +30,7 @@ interface SpinType {
 }
 
 export const Spin: FC<SpinType> = ({
+	index,
 	loading,
 	setPrize,
 	children,
@@ -67,18 +70,14 @@ export const Spin: FC<SpinType> = ({
 	const SpinLootbox = async () => {
 		if (!wallet) return toast.error('Please connect your wallet');
 
-		const is_solana = true;
-		const price_amount =
-			Number(process.env.NEXT_PUBLIC_FEE_SOL_BUY_TURN) * 10 ** 9;
 		try {
 			setLoading(true);
-			const { response, error } = await buyTurn(
-				wallet as NodeWallet,
-				selectedWheel.publicKey,
-				is_solana,
-				NATIVE_MINT,
-				price_amount,
-			);
+			const { response, error } = await buyTurn({
+				is_Solana: false,
+				isYouWallet: wallet as NodeWallet,
+				yourWheel: selectedWheel.publicKey,
+				...TOKENS_DATA[index],
+			});
 
 			console.log('🚀❤️‍🔥❤️‍🔥❤️‍🔥@ ~ SpinLootbox ~ response:', response);
 			console.log('👀👀👀 ~ SpinLootbox ~ error:', error);

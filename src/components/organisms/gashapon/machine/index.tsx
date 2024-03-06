@@ -60,6 +60,7 @@ export const Machine: FC<Props> = ({ selectedWheel, getAllWheels }) => {
 									key={`${wheel.publicKey.toBase58()}-${index}`}
 								>
 									<Spin
+										index={index}
 										loading={loading}
 										setPrize={setPrize}
 										selectedWheel={wheel}
